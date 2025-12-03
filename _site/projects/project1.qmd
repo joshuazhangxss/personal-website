@@ -1,0 +1,7 @@
+---
+title: "Student Habits & Academic Success"
+---
+
+# Student Habits & Academic Success
+
+(Add your plots, methods, motivation, results, and takeaways here.)

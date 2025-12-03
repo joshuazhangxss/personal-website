@@ -2,15 +2,127 @@
   {
     "objectID": "about.html",
     "href": "about.html",
-    "title": "About",
+    "title": "Projects",
     "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2"
+    "text": "Predicting academic performance from study habits, sleep, GPA and behavior.\nR, glmnet, cross-validation and explanatory visualizations.\nPresented as a 6-minute data talk.\n\n\n\n\n\n\nCompared lasso, ridge and XGBoost classifiers on image features.\nEvaluated on accuracy + ROC.\nFindings communicated with visual diagnostics.\n\n\n\n\n\n\nWeb dashboard turning geospatial fire data into public-friendly visuals.\nDesigned cleaner visual storytelling, not just raw plots."
   },
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "website",
+    "title": "Joshua (Xingwang) Zhang",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2"
+    "text": "I’m an undergraduate Statistics & Data Science student at UCLA who loves turning messy data into clear stories and useful tools. Outside of class, I run an Amazon e-commerce business, manage an Airbnb, and build data-driven dashboards and models for real-world problems.\nWhen I’m not debugging R or Python, you can probably find me playing basketball, practicing piano or guitar, or testing a new 3D-printed idea."
+  },
+  {
+    "objectID": "index.html#education",
+    "href": "index.html#education",
+    "title": "Joshua (Xingwang) Zhang",
+    "section": "Education",
+    "text": "Education\nUniversity of California, Los Angeles (UCLA) · Los Angeles, CA\nB.S. in Statistics & Data Science · Expected June 2026\n- Interests: data science, analytics."
+  },
+  {
+    "objectID": "index.html#experience",
+    "href": "index.html#experience",
+    "title": "Joshua (Xingwang) Zhang",
+    "section": "Experience",
+    "text": "Experience\nHurams Work LLC · Co-Founder & Data Analyst · 2021 – 02/2025\n- Built and scaled an Amazon e-commerce operation (5,000+ orders, six-figure annual revenue).\n- Analyzed sales, pricing, and advertising data in R/Excel to optimize product mix and profits.\n- Designed dashboards to track unit economics, inventory, refunds, and customer satisfaction\n(98%+ positive rating).\n- Coordinated suppliers, logistics, and customer messaging to keep operations smooth.\nAirbnb Host & Operations Analyst · 06/2025 – 09/2025\n- Manage day-to-day operations for a short-term rental property.\n- Built spreadsheets to track occupancy, pricing, cleaning costs, and repair/claim history.\n- Use data to adjust pricing strategy and improve guest experience and review scores.\nAcademic & Project Work · UCLA\n- Collaborate on statistics and data-science projects with classmates from psychology, sociology, and statistics courses.\n- Present data stories using R, Quarto, and BetterPoster-style visualizations."
+  },
+  {
+    "objectID": "index.html#selected-projects",
+    "href": "index.html#selected-projects",
+    "title": "Joshua (Xingwang) Zhang",
+    "section": "Selected Projects",
+    "text": "Selected Projects\nStudent Habits & Academic Success: A Behavioral Analysis\n- Modeled the relationship between study habits, sleep, time management, and grades.\n- Used R (tidyverse, ggplot2) for cleaning, EDA, and classification models (logistic / glmnet).\n- Communicated findings in a 6-minute talk with visualizations and an R Quarto report.\nSkin Cancer Classification with Machine Learning\n- Compared regularized logistic regression (lasso/ridge) and tree-based models on image features.\n- Tuned hyperparameters via cross-validation; evaluated with accuracy, ROC curves, and confusion matrices.\nFirestorm: Connecting Wildfire Data to People\n- Built a team website that visualizes fire-pattern and detection data.\n- Focused on making complex spatial data understandable for non-technical audiences using clear charts and explanations."
+  },
+  {
+    "objectID": "index.html#skills",
+    "href": "index.html#skills",
+    "title": "Joshua (Xingwang) Zhang",
+    "section": "Skills",
+    "text": "Skills\nProgramming & Tools\nR (tidyverse, ggplot2, caret, glmnet), Python (pandas, NumPy, scikit-learn), SQL, Git/GitHub,\nQuarto, Markdown, Excel/Google Sheets, Tableau/Power BI (familiar), LaTeX/Overleaf (basic).\nData Skills\nData wrangling, feature engineering, exploratory data analysis, visualization, regression and classification models, cross-validation, reporting, and reproducible workflows.\nOther\nProject coordination, small-business operations, customer communication (English & Chinese), presentation and technical writing."
+  },
+  {
+    "objectID": "about.html#student-habits-academic-success",
+    "href": "about.html#student-habits-academic-success",
+    "title": "Projects",
+    "section": "",
+    "text": "Predicting academic performance from study habits, sleep, GPA and behavior.\nR, glmnet, cross-validation and explanatory visualizations.\nPresented as a 6-minute data talk."
+  },
+  {
+    "objectID": "about.html#skin-cancer-classification",
+    "href": "about.html#skin-cancer-classification",
+    "title": "Projects",
+    "section": "",
+    "text": "Compared lasso, ridge and XGBoost classifiers on image features.\nEvaluated on accuracy + ROC.\nFindings communicated with visual diagnostics."
+  },
+  {
+    "objectID": "about.html#firestorm-wildfire-pattern-visualizations",
+    "href": "about.html#firestorm-wildfire-pattern-visualizations",
+    "title": "Projects",
+    "section": "",
+    "text": "Web dashboard turning geospatial fire data into public-friendly visuals.\nDesigned cleaner visual storytelling, not just raw plots."
+  },
+  {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Projects",
+    "section": "",
+    "text": "Skin Cancer Classification Prediction\n\n\n\nMachine Learning\n\nPython\n\nHealth\n\n\n\nComparing regularized logistic regression and tree-based models for skin cancer detection.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nStudent Habits & Academic Success\n\n\n\nStatistics\n\nR\n\nEducation\n\n\n\nPredicting academic performance from study habits using R & ML.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFirestorm – Visualizing Wildfire Patterns\n\n\n\nData Visualization\n\nGeospatial\n\nTeam Project\n\n\n\nTurning geospatial wildfire data into clear visuals and stories for non-technical audiences.\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "projects.html#student-habits-academic-success",
+    "href": "projects.html#student-habits-academic-success",
+    "title": "Projects",
+    "section": "",
+    "text": "View Project →\n\nPredicting academic performance from study habits, sleep, and behavior.\nR, glmnet, classification, cross-validation.\n6-minute data talk with Quarto + ggplot visuals."
+  },
+  {
+    "objectID": "projects.html#skin-cancer-classification",
+    "href": "projects.html#skin-cancer-classification",
+    "title": "Projects",
+    "section": "",
+    "text": "View Project →\n\nRegularized logistic regression vs XGBoost.\nFeature engineering, ROC, accuracy comparison."
+  },
+  {
+    "objectID": "projects.html#firestorm-wildfire-pattern-visualizations",
+    "href": "projects.html#firestorm-wildfire-pattern-visualizations",
+    "title": "Projects",
+    "section": "",
+    "text": "Web dashboard turning geospatial fire data into public-friendly visuals.\nDesigned cleaner visual storytelling, not just raw plots."
+  },
+  {
+    "objectID": "Projects/project1.html",
+    "href": "Projects/project1.html",
+    "title": "Student Habits & Academic Success",
+    "section": "",
+    "text": "Student Habits & Academic Success\n(Add your plots, methods, motivation, results, and takeaways here.)"
+  },
+  {
+    "objectID": "projects.html#firestorm-visualizing-wildfire-patterns",
+    "href": "projects.html#firestorm-visualizing-wildfire-patterns",
+    "title": "Projects",
+    "section": "",
+    "text": "View Project →\n\nClean visual storytelling for public-access data.\nGeospatial datasets + mapping visualizations."
+  },
+  {
+    "objectID": "coursework.html",
+    "href": "coursework.html",
+    "title": "Coursework",
+    "section": "",
+    "text": "Stats 102B – Intro to Computation & Optimization for Statistics\nR programming, optimization algorithms, regression with regularization.\nStats 102C – Regression & Statistical Learning\nLinear/logistic regression, glmnet, cross-validation, model selection.\nStats 140XP – Design & Analysis of Experiments\nANOVA, mixed designs, randomized experiments, R + report writing.\n\n\n\n\n\nPsychology / Sociology research courses\nData collection, survey design, basic modeling, report writing."
+  },
+  {
+    "objectID": "coursework.html#ucla-statistics-data-science",
+    "href": "coursework.html#ucla-statistics-data-science",
+    "title": "Coursework",
+    "section": "",
+    "text": "Stats 102B – Intro to Computation & Optimization for Statistics\nR programming, optimization algorithms, regression with regularization.\nStats 102C – Regression & Statistical Learning\nLinear/logistic regression, glmnet, cross-validation, model selection.\nStats 140XP – Design & Analysis of Experiments\nANOVA, mixed designs, randomized experiments, R + report writing.\n\n\n\n\n\nPsychology / Sociology research courses\nData collection, survey design, basic modeling, report writing."
+  },
+  {
+    "objectID": "Projects/student_habit.html",
+    "href": "Projects/student_habit.html",
+    "title": "Student Habits & Academic Success",
+    "section": "",
+    "text": "Student Habits & Academic Success\n(Add your plots, methods, motivation, results, and takeaways here.)"
   }
 ]

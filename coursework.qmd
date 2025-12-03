@@ -1,0 +1,23 @@
+---
+title: "Coursework"
+---
+
+## UCLA – Statistics & Data Science
+
+### Core Statistics / Data Science
+
+- **Stats 102B – Intro to Computation & Optimization for Statistics**  
+  R programming, optimization algorithms, regression with regularization.
+
+- **Stats 102C – Regression & Statistical Learning**  
+  Linear/logistic regression, glmnet, cross-validation, model selection.
+
+- **Stats 140XP – Design & Analysis of Experiments**  
+  ANOVA, mixed designs, randomized experiments, R + report writing.
+
+### Other Quantitative / Applied Courses
+
+- **Psychology / Sociology research courses**  
+  Data collection, survey design, basic modeling, report writing.
+
+---

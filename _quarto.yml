@@ -2,20 +2,28 @@ project:
   type: website
 
 website:
-  title: "website"
+  title: "Joshua Zhang"
   navbar:
     left:
       - href: index.qmd
         text: Home
-      - about.qmd
+      - href: projects.qmd
+        text: Projects
+      - href: coursework.qmd
+        text: Coursework
+
+  page-footer:
+    center: |
+      © 2025 Joshua Zhang — Built with Quarto, GitHub & Netlify
+    right:
+      - icon: github
+        href: https://github.com/joshuazhangxss
+      - icon: linkedin
+        href: https://www.linkedin.com/in/xingwang-zhang/
+      - icon: envelope
+        href: "mailto:joshuazhangxss@ucla.edu"
 
 format:
   html:
-    theme:
-      - cosmo
-      - brand
-    css: styles.css
-    toc: true
-
-
-
+    theme: cosmo
+    toc: false

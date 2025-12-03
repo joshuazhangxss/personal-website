@@ -1,0 +1,7 @@
+---
+title: "Student Habits & Academic Success"
+description: "Predicting academic performance from study habits using R & ML."
+categories: ["Statistics", "R", "Education"]
+image: Image/student.png
+---
+

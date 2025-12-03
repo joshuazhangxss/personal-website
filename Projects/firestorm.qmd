@@ -1,0 +1,6 @@
+---
+title: "Firestorm – Visualizing Wildfire Patterns"
+description: "Turning geospatial wildfire data into clear visuals and stories for non-technical audiences."
+categories: ["Data Visualization", "Geospatial", "Team Project"]
+image: Image/firestorm.png    
+---

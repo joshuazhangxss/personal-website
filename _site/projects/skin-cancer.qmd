@@ -1,0 +1,6 @@
+---
+title: "Skin Cancer Classification"
+description: "Comparing regularized logistic regression and tree-based models for skin cancer detection."
+image: Image/skin-cancer.png   
+---
+

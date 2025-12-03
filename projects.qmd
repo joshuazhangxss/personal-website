@@ -1,0 +1,18 @@
+---
+title: "Projects"
+toc: false
+
+listing:
+  contents: Projects
+  type: default
+  sort: false
+  filter-ui: true
+  categories: true  
+  image-height: 120px
+  fields:
+    - image
+    - title
+    - description
+    - categories
+---
+

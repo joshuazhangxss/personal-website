@@ -1,11 +1,93 @@
 ---
-title: "website"
+title: "Joshua (Xingwang) Zhang"
+about:
+  template: trestles
+  image: profile.jpeg
+  links:
+    - icon: github
+      text: GitHub
+      href: https://github.com/joshuazhangxss
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/xingwang-zhang/
+    - icon: envelope
+      text: Email
+      href: "mailto:joshuazhangxss@ucla.edu"
+    - icon: globe
+      text: Portfolio
+      href: https://joshua-zhang.netlify.app/
+    - text: Resume
+      href: "Xingwang.pdf"
+
 ---
 
-This is a Quarto website.
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
 
-```{r}
-1 + 1
-```
+I’m an undergraduate Statistics & Data Science student at UCLA who loves turning messy data
+into clear stories and useful tools. Outside of class, I run an Amazon e-commerce business,
+manage an Airbnb, and build data-driven dashboards and models for real-world problems.
+
+When I’m not debugging R or Python, you can probably find me playing basketball, practicing
+piano or guitar, or testing a new 3D-printed idea.
+
+## Education
+
+**University of California, Los Angeles (UCLA)** · Los Angeles, CA  
+B.S. in Statistics & Data Science · _Expected June 2026_  
+- Interests: data science, analytics.
+
+---
+
+## Experience
+
+**Hurams Work LLC** · Co-Founder & Data Analyst · _2021 – 02/2025_  
+- Built and scaled an Amazon e-commerce operation (5,000+ orders, six-figure annual revenue).  
+- Analyzed sales, pricing, and advertising data in R/Excel to optimize product mix and profits.  
+- Designed dashboards to track unit economics, inventory, refunds, and customer satisfaction  
+  (98%+ positive rating).  
+- Coordinated suppliers, logistics, and customer messaging to keep operations smooth.
+
+**Airbnb Host & Operations Analyst** · _06/2025 – 09/2025_  
+- Manage day-to-day operations for a short-term rental property.  
+- Built spreadsheets to track occupancy, pricing, cleaning costs, and repair/claim history.  
+- Use data to adjust pricing strategy and improve guest experience and review scores.  
+
+**Academic & Project Work** · UCLA  
+- Collaborate on statistics and data-science projects with classmates from psychology,
+  sociology, and statistics courses.  
+- Present data stories using R, Quarto, and BetterPoster-style visualizations.
+
+---
+
+## Selected Projects
+
+**Student Habits & Academic Success: A Behavioral Analysis**  
+- Modeled the relationship between study habits, sleep, time management, and grades.  
+- Used R (tidyverse, ggplot2) for cleaning, EDA, and classification models (logistic / glmnet).  
+- Communicated findings in a 6-minute talk with visualizations and an R Quarto report.
+
+**Skin Cancer Classification with Machine Learning**  
+- Compared regularized logistic regression (lasso/ridge) and tree-based models on image features.  
+- Tuned hyperparameters via cross-validation; evaluated with accuracy, ROC curves, and confusion
+  matrices.  
+
+**Firestorm: Connecting Wildfire Data to People**  
+- Built a team website that visualizes fire-pattern and detection data.  
+- Focused on making complex spatial data understandable for non-technical audiences using
+  clear charts and explanations.
+
+---
+
+## Skills
+
+**Programming & Tools**  
+R (tidyverse, ggplot2, caret, glmnet), Python (pandas, NumPy, scikit-learn), SQL, Git/GitHub,  
+Quarto, Markdown, Excel/Google Sheets, Tableau/Power BI (familiar), LaTeX/Overleaf (basic).
+
+**Data Skills**  
+Data wrangling, feature engineering, exploratory data analysis, visualization, regression and
+classification models, cross-validation, reporting, and reproducible workflows.
+
+**Other**  
+Project coordination, small-business operations, customer communication (English & Chinese),
+presentation and technical writing.

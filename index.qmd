@@ -20,7 +20,7 @@ about:
       href: "Xingwang.pdf"
 
 ---
-
+DOWNLOAD [CV](Xingwang.pdf){target="_blank" download}
 
 
 I’m an undergraduate Statistics & Data Science student at UCLA who loves turning messy data

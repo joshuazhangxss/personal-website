@@ -2,22 +2,66 @@
 title: "Coursework"
 ---
 
-## UCLA – Statistics & Data Science
+# Coursework
 
-### Core Statistics / Data Science
-
-- **Stats 102B – Intro to Computation & Optimization for Statistics**  
-  R programming, optimization algorithms, regression with regularization.
-
-- **Stats 102C – Regression & Statistical Learning**  
-  Linear/logistic regression, glmnet, cross-validation, model selection.
-
-- **Stats 140XP – Design & Analysis of Experiments**  
-  ANOVA, mixed designs, randomized experiments, R + report writing.
-
-### Other Quantitative / Applied Courses
-
-- **Psychology / Sociology research courses**  
-  Data collection, survey design, basic modeling, report writing.
+This page highlights the UCLA courses that shape my Statistics & Data Science background.  
 
 ---
+
+## Completed Courses
+
+### Fall 2024
+
+- **CCAS 10A – Chicano History & Culture**  
+- **STATS 100A – Introduction to Probability**  
+- **STATS 20 – Programming with R** 
+
+---
+
+### Winter 2025
+
+- **STATS 100B – Introduction to Mathematical Statistics**  
+- **STATS 101A – Introduction to Data Analysis and Regression**  
+- **STATS 102A – Introduction to Computational Statistics with R**  
+
+---
+
+### Spring 2025
+
+- **COMM 188C – Data Science for Social Good**  
+- **STATS 100C – Linear Models**  
+- **STATS 102B – Introduction to Computation & Optimization**  
+
+---
+
+### Summer 2025
+
+- **DGT HUM 101 – Digital Humanities**  
+- **STATS 101B – Design & Analysis of Experiments**  
+- **STATS 102C – Monte Carlo Methods**   
+
+---
+
+## In-Progress & Planned
+
+### Fall 2025 (In Progress)
+
+- **STATS 101C – Regression and Data Mining**  
+- **STATS 140XP – Statistics Consulting**  
+
+---
+
+### Winter 2026 (Planned / In Progress)
+
+- **AF AMER 112A – The Sunken Place**  
+- **FILM TV 183A – Film & TV Development**  
+- **STATS 141XP – Statistics Consulting (Capstone sequence)**  
+
+---
+
+## Focus Areas
+
+- **Statistical Theory & Methods** – STATS 100A–C, 101A–C  
+- **Computing & Optimization** – STATS 20, 102A–C  
+- **Applied & Consulting** – STATS 101B, 140XP, 141XP  
+- **Interdisciplinary Work** – Data science for social good, digital humanities, film & media, and ethnic studies

@@ -5,3 +5,168 @@ categories: ["Machine Learning", "Python", "Health"]
 image: Image/skin-cancer.png   
 ---
 
+---
+title: "Skin Cancer Classification Prediction"
+description: "Comparing LM, Lasso, Ridge, Random Forest, XGBoost, and GLMNet for predicting malignant vs. benign skin cancer."
+categories: ["Machine Learning", "Health", "R"]
+image: Image/skin-cancer.png
+---
+
+# Skin Cancer Classification Prediction
+
+This project builds a model to predict whether a skin lesion is **benign or malignant** using a 70,000-row synthetic dataset with demographic, environmental, and dermatological features. We compared multiple modeling approaches and ultimately selected **GLMNet** for its stability, interpretability, and strong generalization.
+
+---
+
+## 🎯 Problem & Context
+
+- Skin cancer is among the most common and preventable cancers.  
+- Our task: build a **robust classifier** that distinguishes benign vs. malignant lesions.  
+- Dataset includes both meaningful predictors and intentionally added noise variables.
+
+---
+
+## 📊 Dataset Overview
+
+- **70,000 total observations**
+- **49 initial features → 36 meaningful after cleaning**
+- **Binary target:** benign (0) vs malignant (1)
+
+Features include:  
+- Lesion size, color, location  
+- UV exposure behavior  
+- Environment (distance to beach, latitude/longitude)  
+- Age, demographics  
+- Lifestyle factors (exercise, smoking, diet)  
+- **10+ noise variables** (favorite_color, phone_brand, etc.)
+
+---
+
+## 🧼 Data Cleaning
+
+### Missing Values
+- ~8% missing across variables  
+- Median + mode imputation
+
+### Noise Removal
+Dropped intentionally irrelevant variables, like:  
+`favorite_color`, `preferred_cuisine`, `desk_height_cm`, `zip_code_last_digit`, etc.
+
+### Multicollinearity Check
+Revealed strong clusters:  
+- **Lesion features** (strongest predictors)  
+- **Sun exposure patterns**  
+- **Lifestyle variables**
+
+---
+
+# 🤖 Model Comparison
+
+We compared multiple approaches to find the best balance of accuracy, stability, and interpretability.
+
+## **1. Linear Regression (LM)**
+- Used as a baseline even though outcome is binary  
+- Produced poor probability calibration  
+- **Not suitable for classification**  
+➡️ Eliminated immediately
+
+## **2. Regularized Models**
+### **Lasso (L1)**
+- Removes irrelevant features  
+- Good for high-dimensional noisy data  
+- Slightly unstable across seeds
+
+### **Ridge (L2)**
+- Penalizes large coefficients  
+- More stable than Lasso  
+- Retains too many weak predictors
+
+### **Elastic Net (GLMNet) – Final Choice**
+- Mix of L1 + L2 regularization  
+- More stable than Lasso alone  
+- Removes noise but keeps important correlated features  
+- Interpretable coefficients  
+➡️ **Chosen model**
+
+---
+
+## **3. Tree-Based Models**
+
+### **Random Forest**
+- Good accuracy  
+- Captures non-linear interactions  
+- **Very unstable across random seeds**  
+- Performance varied by ±5%
+
+### **XGBoost**
+- Strong performance after tuning  
+- Captured complex relationships  
+- Overfitted easily  
+- Harder to interpret
+
+### **Stacked Trees**
+- Best raw predictive power  
+- Most complex + most unstable  
+- Training time extremely high  
+➡️ Not selected due to instability + interpretability concerns
+
+---
+
+# 🏆 Why GLMNet Was the Final Model
+
+### ✔ Most stable across 40 multi-seed runs  
+### ✔ Interpretable (coefficients meaningful for healthcare context)  
+### ✔ Handles noise and collinearity automatically  
+### ✔ Almost as accurate as XGBoost but far more reliable  
+### ✔ Reproducible even with slight data shuffling  
+
+---
+
+## 🎲 Multi-Seed Search & Threshold Tuning
+
+### Multi-seed search
+- Ran the pipeline **40 different times** with new random splits  
+- Found a stable seed/configuration  
+- Avoided lucky/unlucky single-split results
+
+### Threshold tuning
+- Default cutoff 0.50 was not optimal  
+- Tuned threshold from 0.45 → 0.55  
+- Best cutoff found: **0.507**  
+➡️ Slight but meaningful accuracy improvement
+
+---
+
+# 🔍 Key Findings
+
+- **Lesion size is the dominant predictor** of malignancy  
+- More sunburns & lower SPF behaviors slightly increase predicted risk  
+- Lifestyle and demographic variables have limited predictive power  
+- GLMNet shrinks irrelevant/noisy variables to zero  
+- Final performance:
+  - ~60% accuracy on the test set (after threshold tuning)
+  - Very stable performance across seeds  
+  - Balanced sensitivity & specificity
+
+---
+
+## ⚠️ Limitations
+
+- Median/mode imputation oversimplifies missingness  
+- Synthetic dataset mixed with noise variables  
+- GLMNet cannot model complex non-linear interactions
+
+---
+
+## 🧠 Takeaways
+
+- Simpler models can outperform complex ensembles when stability matters  
+- Regularization is crucial when dealing with noisy, synthetic, or high-dimensional data  
+- Tree-based models require careful seed control and tend to be far less reproducible  
+- Lesion characteristics dominate all other factors when predicting malignancy
+
+---
+
+## 🎤 Slides
+
+[👉 View Presentation Slides (PDF)](skin-cancer-slides.pdf){Slide}

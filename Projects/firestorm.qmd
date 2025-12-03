@@ -4,3 +4,13 @@ description: "Turning geospatial wildfire data into clear visuals and stories fo
 categories: ["Data Visualization", "Geospatial", "Team Project"]
 image: Image/firestorm.png    
 ---
+
+# Firestorm – Visualizing Wildfire Patterns
+
+Our Firestorm project focuses on helping non-technical audiences understand wildfire danger, spread, and impact using clear visuals and maps instead of dense technical reports.
+
+## 🔗 Live Website
+
+
+[View Firestorm Website →](https://firestorm.humspace.ucla.edu/){target="_blank"}
+

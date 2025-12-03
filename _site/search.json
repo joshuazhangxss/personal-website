@@ -75,5 +75,159 @@
     "title": "Coursework",
     "section": "",
     "text": "Statistical Theory & Methods – STATS 100A–C, 101A–C\n\nComputing & Optimization – STATS 20, 102A–C\n\nApplied & Consulting – STATS 101B, 140XP, 141XP\n\nInterdisciplinary Work – Data science for social good, digital humanities, film & media, and ethnic studies"
+  },
+  {
+    "objectID": "Projects/firestorm.html",
+    "href": "Projects/firestorm.html",
+    "title": "Firestorm – Visualizing Wildfire Patterns",
+    "section": "",
+    "text": "Our Firestorm project focuses on helping non-technical audiences understand wildfire danger, spread, and impact using clear visuals and maps instead of dense technical reports.\n\n\nView Firestorm Website →"
+  },
+  {
+    "objectID": "Projects/firestorm.html#live-website-time-limited",
+    "href": "Projects/firestorm.html#live-website-time-limited",
+    "title": "Firestorm – Visualizing Wildfire Patterns",
+    "section": "",
+    "text": "View Firestorm Website →"
+  },
+  {
+    "objectID": "Projects/firestorm.html#live-website",
+    "href": "Projects/firestorm.html#live-website",
+    "title": "Firestorm – Visualizing Wildfire Patterns",
+    "section": "",
+    "text": "View Firestorm Website →"
+  },
+  {
+    "objectID": "Projects/student_habit.html",
+    "href": "Projects/student_habit.html",
+    "title": "Student Habits & Academic Success",
+    "section": "",
+    "text": "This project studies how everyday student habits—like study time, sleep, screen use, and well-being—relate to exam performance. We use a Kaggle dataset of 1,000 students with behavioral and demographic variables and build a regression model to quantify which habits matter most for grades."
+  },
+  {
+    "objectID": "Projects/student_habit.html#goal-research-question",
+    "href": "Projects/student_habit.html#goal-research-question",
+    "title": "Student Habits & Academic Success",
+    "section": "🎯 Goal & Research Question",
+    "text": "🎯 Goal & Research Question\n\nGoal: Understand how student lifestyle habits relate to academic success.\nResearch question:\n&gt; “How do study time, sleep, screen use, and other daily habits affect exam scores?”"
+  },
+  {
+    "objectID": "Projects/student_habit.html#dataset",
+    "href": "Projects/student_habit.html#dataset",
+    "title": "Student Habits & Academic Success",
+    "section": "📊 Dataset",
+    "text": "📊 Dataset\n\nSource: Kaggle “Student Habits vs Academic Performance” dataset.\nSample size: 1,000 students\n\nStructure: 16 columns, including:\n\nstudy_hours_per_day\n\nsleep_hours\n\nsocial_media_hours, netflix_hours\n\nexercise_frequency\n\nattendance_percentage\n\ndiet_quality, mental_health_rating\n\nexam_score (target)\n\n\nPre-processing in R:\n\nRemoved student_id\n\nConverted character variables to factors\n\nChecked for missing values"
+  },
+  {
+    "objectID": "Projects/student_habit.html#methods",
+    "href": "Projects/student_habit.html#methods",
+    "title": "Student Habits & Academic Success",
+    "section": "🔧 Methods",
+    "text": "🔧 Methods\nWe modeled exam_score using multiple linear regression.\n\nStarted with all 15 behavioral and demographic predictors.\n\nUsed stepwise selection (stepAIC) to remove insignificant variables and avoid overfitting.\n\nFinal model kept 7 significant predictors:\n\nstudy_hours_per_day\n\nsleep_hours\n\nattendance_percentage\n\nexercise_frequency\n\nmental_health_rating\n\nsocial_media_hours (negative effect)\n\nnetflix_hours (negative effect)\n\n\nTools: R (lm, MASS::stepAIC, broom, ggplot2)."
+  },
+  {
+    "objectID": "Projects/student_habit.html#model-performance-effects",
+    "href": "Projects/student_habit.html#model-performance-effects",
+    "title": "Student Habits & Academic Success",
+    "section": "📈 Model Performance & Effects",
+    "text": "📈 Model Performance & Effects\nFrom the final regression model:\n\nAdjusted R² ≈ 0.90 – the model explains about 90% of the variance in exam scores.\n\nAll predictors in the final model are highly significant (p &lt; 0.001).\n\nLargest effect sizes:\n\n+9.57 exam points per additional hour of study time per day\n\n–2.62 exam points per additional hour of social media use\n\n–2.28 exam points per additional hour of Netflix use\n\n\nPositive but smaller contributors:\n\nHigher attendance, more sleep, more exercise, and better mental-health ratings all contribute modestly to higher scores."
+  },
+  {
+    "objectID": "Projects/student_habit.html#key-insights",
+    "href": "Projects/student_habit.html#key-insights",
+    "title": "Student Habits & Academic Success",
+    "section": "🔍 Key Insights",
+    "text": "🔍 Key Insights\n\nStudy time is the strongest positive driver of exam performance.\n\nSleep and mental health matter—students who sleep more and rate their mental health higher tend to do better.\n\nScreen time works against performance, especially social media and Netflix.\n\nAttendance and exercise have smaller but still positive effects."
+  },
+  {
+    "objectID": "Projects/student_habit.html#practical-advice-for-students",
+    "href": "Projects/student_habit.html#practical-advice-for-students",
+    "title": "Student Habits & Academic Success",
+    "section": "✅ Practical Advice for Students",
+    "text": "✅ Practical Advice for Students\nBased on our model and exploratory analysis:\n- Boost structured study hours—even 1 extra focused hour a day has a big payoff.\n- Aim for 7–8 hours of sleep to support both grades and mental health.\n- Stay physically active, even in small amounts.\n- Be intentional with screen time, especially social media and streaming.\n- Maintain consistent attendance and prioritize your mental well-being."
+  },
+  {
+    "objectID": "Projects/student_habit.html#project-files",
+    "href": "Projects/student_habit.html#project-files",
+    "title": "Student Habits & Academic Success",
+    "section": "📄 Project Files",
+    "text": "📄 Project Files\n\n🎤 Presentation slides (PDF)\nDownload →{Slide}"
+  },
+  {
+    "objectID": "Projects/skin-cancer.html",
+    "href": "Projects/skin-cancer.html",
+    "title": "Skin Cancer Classification Prediction",
+    "section": "",
+    "text": "This project builds a model to predict whether a skin lesion is benign or malignant using a 70,000-row synthetic dataset with demographic, environmental, and dermatological features. We compared multiple modeling approaches and ultimately selected GLMNet for its stability, interpretability, and strong generalization.\n\n\n\n\nSkin cancer is among the most common and preventable cancers.\n\nOur task: build a robust classifier that distinguishes benign vs. malignant lesions.\n\nDataset includes both meaningful predictors and intentionally added noise variables.\n\n\n\n\n\n\n70,000 total observations\n49 initial features → 36 meaningful after cleaning\nBinary target: benign (0) vs malignant (1)\n\nFeatures include:\n- Lesion size, color, location\n- UV exposure behavior\n- Environment (distance to beach, latitude/longitude)\n- Age, demographics\n- Lifestyle factors (exercise, smoking, diet)\n- 10+ noise variables (favorite_color, phone_brand, etc.)\n\n\n\n\n\n\n\n~8% missing across variables\n\nMedian + mode imputation\n\n\n\n\nDropped intentionally irrelevant variables, like:\nfavorite_color, preferred_cuisine, desk_height_cm, zip_code_last_digit, etc.\n\n\n\nRevealed strong clusters:\n- Lesion features (strongest predictors)\n- Sun exposure patterns\n- Lifestyle variables"
+  },
+  {
+    "objectID": "Projects/skin-cancer.html#problem-context",
+    "href": "Projects/skin-cancer.html#problem-context",
+    "title": "Skin Cancer Classification Prediction",
+    "section": "",
+    "text": "Skin cancer is among the most common and preventable cancers.\n\nOur task: build a robust classifier that distinguishes benign vs. malignant lesions.\n\nDataset includes both meaningful predictors and intentionally added noise variables."
+  },
+  {
+    "objectID": "Projects/skin-cancer.html#dataset-overview",
+    "href": "Projects/skin-cancer.html#dataset-overview",
+    "title": "Skin Cancer Classification Prediction",
+    "section": "",
+    "text": "70,000 total observations\n49 initial features → 36 meaningful after cleaning\nBinary target: benign (0) vs malignant (1)\n\nFeatures include:\n- Lesion size, color, location\n- UV exposure behavior\n- Environment (distance to beach, latitude/longitude)\n- Age, demographics\n- Lifestyle factors (exercise, smoking, diet)\n- 10+ noise variables (favorite_color, phone_brand, etc.)"
+  },
+  {
+    "objectID": "Projects/skin-cancer.html#data-cleaning",
+    "href": "Projects/skin-cancer.html#data-cleaning",
+    "title": "Skin Cancer Classification Prediction",
+    "section": "",
+    "text": "~8% missing across variables\n\nMedian + mode imputation\n\n\n\n\nDropped intentionally irrelevant variables, like:\nfavorite_color, preferred_cuisine, desk_height_cm, zip_code_last_digit, etc.\n\n\n\nRevealed strong clusters:\n- Lesion features (strongest predictors)\n- Sun exposure patterns\n- Lifestyle variables"
+  },
+  {
+    "objectID": "Projects/skin-cancer.html#linear-regression-lm",
+    "href": "Projects/skin-cancer.html#linear-regression-lm",
+    "title": "Skin Cancer Classification Prediction",
+    "section": "1. Linear Regression (LM)",
+    "text": "1. Linear Regression (LM)\n\nUsed as a baseline even though outcome is binary\n\nProduced poor probability calibration\n\nNot suitable for classification\n➡️ Eliminated immediately"
+  },
+  {
+    "objectID": "Projects/skin-cancer.html#regularized-models",
+    "href": "Projects/skin-cancer.html#regularized-models",
+    "title": "Skin Cancer Classification Prediction",
+    "section": "2. Regularized Models",
+    "text": "2. Regularized Models\n\nLasso (L1)\n\nRemoves irrelevant features\n\nGood for high-dimensional noisy data\n\nSlightly unstable across seeds\n\n\n\nRidge (L2)\n\nPenalizes large coefficients\n\nMore stable than Lasso\n\nRetains too many weak predictors\n\n\n\nElastic Net (GLMNet) – Final Choice\n\nMix of L1 + L2 regularization\n\nMore stable than Lasso alone\n\nRemoves noise but keeps important correlated features\n\nInterpretable coefficients\n➡️ Chosen model"
+  },
+  {
+    "objectID": "Projects/skin-cancer.html#tree-based-models",
+    "href": "Projects/skin-cancer.html#tree-based-models",
+    "title": "Skin Cancer Classification Prediction",
+    "section": "3. Tree-Based Models",
+    "text": "3. Tree-Based Models\n\nRandom Forest\n\nGood accuracy\n\nCaptures non-linear interactions\n\nVery unstable across random seeds\n\nPerformance varied by ±5%\n\n\n\nXGBoost\n\nStrong performance after tuning\n\nCaptured complex relationships\n\nOverfitted easily\n\nHarder to interpret\n\n\n\nStacked Trees\n\nBest raw predictive power\n\nMost complex + most unstable\n\nTraining time extremely high\n➡️ Not selected due to instability + interpretability concerns"
+  },
+  {
+    "objectID": "Projects/skin-cancer.html#multi-seed-search-threshold-tuning",
+    "href": "Projects/skin-cancer.html#multi-seed-search-threshold-tuning",
+    "title": "Skin Cancer Classification Prediction",
+    "section": "🎲 Multi-Seed Search & Threshold Tuning",
+    "text": "🎲 Multi-Seed Search & Threshold Tuning\n\nMulti-seed search\n\nRan the pipeline 40 different times with new random splits\n\nFound a stable seed/configuration\n\nAvoided lucky/unlucky single-split results\n\n\n\nThreshold tuning\n\nDefault cutoff 0.50 was not optimal\n\nTuned threshold from 0.45 → 0.55\n\nBest cutoff found: 0.507\n➡️ Slight but meaningful accuracy improvement"
+  },
+  {
+    "objectID": "Projects/skin-cancer.html#limitations",
+    "href": "Projects/skin-cancer.html#limitations",
+    "title": "Skin Cancer Classification Prediction",
+    "section": "⚠️ Limitations",
+    "text": "⚠️ Limitations\n\nMedian/mode imputation oversimplifies missingness\n\nSynthetic dataset mixed with noise variables\n\nGLMNet cannot model complex non-linear interactions"
+  },
+  {
+    "objectID": "Projects/skin-cancer.html#takeaways",
+    "href": "Projects/skin-cancer.html#takeaways",
+    "title": "Skin Cancer Classification Prediction",
+    "section": "🧠 Takeaways",
+    "text": "🧠 Takeaways\n\nSimpler models can outperform complex ensembles when stability matters\n\nRegularization is crucial when dealing with noisy, synthetic, or high-dimensional data\n\nTree-based models require careful seed control and tend to be far less reproducible\n\nLesion characteristics dominate all other factors when predicting malignancy"
+  },
+  {
+    "objectID": "Projects/skin-cancer.html#slides",
+    "href": "Projects/skin-cancer.html#slides",
+    "title": "Skin Cancer Classification Prediction",
+    "section": "🎤 Slides",
+    "text": "🎤 Slides\n👉 View Presentation Slides (PDF){Slide}"
   }
 ]

@@ -5,3 +5,103 @@ categories: ["Statistics", "R", "Education"]
 image: Image/student.png
 ---
 
+This project studies how everyday student habits—like study time, sleep,
+screen use, and well-being—relate to exam performance. We use a Kaggle dataset
+of **1,000 students** with behavioral and demographic variables and build a
+regression model to quantify which habits matter most for grades.  
+
+---
+
+## 🎯 Goal & Research Question
+
+- **Goal:** Understand how student lifestyle habits relate to academic success.  
+
+- **Research question:**  
+  > “How do study time, sleep, screen use, and other daily habits affect exam scores?”    
+
+---
+
+## 📊 Dataset
+
+- Source: Kaggle “Student Habits vs Academic Performance” dataset.  
+
+- **Sample size:** 1,000 students  
+- **Structure:** 16 columns, including:   
+  - `study_hours_per_day`  
+  - `sleep_hours`  
+  - `social_media_hours`, `netflix_hours`  
+  - `exercise_frequency`  
+  - `attendance_percentage`  
+  - `diet_quality`, `mental_health_rating`  
+  - `exam_score` (target)  
+- **Pre-processing in R:** 
+  - Removed `student_id`  
+  - Converted character variables to factors  
+  - Checked for missing values
+
+---
+
+## 🔧 Methods
+
+We modeled **exam_score** using multiple linear regression.    
+
+- Started with all **15** behavioral and demographic predictors.   
+- Used **stepwise selection (stepAIC)** to remove insignificant variables and avoid overfitting.  
+- Final model kept **7 significant predictors:**  
+  - `study_hours_per_day`  
+  - `sleep_hours`  
+  - `attendance_percentage`  
+  - `exercise_frequency`  
+  - `mental_health_rating`  
+  - `social_media_hours` (negative effect)  
+  - `netflix_hours` (negative effect)  
+- Tools: R (`lm`, `MASS::stepAIC`, `broom`, `ggplot2`).
+
+---
+
+## 📈 Model Performance & Effects
+
+From the final regression model: 
+
+- **Adjusted R² ≈ 0.90** – the model explains about 90% of the variance in exam scores.  
+- All predictors in the final model are highly significant (*p* < 0.001).  
+- Largest effect sizes:  
+  - **+9.57** exam points per additional hour of study time per day  
+  - **–2.62** exam points per additional hour of social media use  
+  - **–2.28** exam points per additional hour of Netflix use  
+- Positive but smaller contributors:  
+  - Higher attendance, more sleep, more exercise, and better mental-health ratings all contribute modestly to higher scores.
+
+---
+
+## 🔍 Key Insights
+
+- **Study time is the strongest positive driver** of exam performance.  
+- **Sleep and mental health matter**—students who sleep more and rate their
+  mental health higher tend to do better.  
+- **Screen time works against performance**, especially social media and Netflix.  
+- Attendance and exercise have smaller but still positive effects.
+
+---
+
+## ✅ Practical Advice for Students
+
+Based on our model and exploratory analysis:  
+- Boost structured **study hours**—even 1 extra focused hour a day has a big payoff.  
+- Aim for **7–8 hours of sleep** to support both grades and mental health.  
+- Stay **physically active**, even in small amounts.  
+- Be intentional with **screen time**, especially social media and streaming.  
+- Maintain **consistent attendance** and prioritize your mental well-being.
+
+
+---
+
+## 📄 Project Files
+
+
+- 🎤 **Presentation slides (PDF)**  
+  [Download →](Image/student-habits-slides.pdf){Slide}
+
+
+---
+

@@ -148,8 +148,137 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p>This project studies how everyday student habits—like study time, sleep, screen use, and well-being—relate to exam performance. We use a Kaggle dataset of <strong>1,000 students</strong> with behavioral and demographic variables and build a regression model to quantify which habits matter most for grades.</p>
+<hr>
+<section id="goal-research-question" class="level2">
+<h2 class="anchored" data-anchor-id="goal-research-question">🎯 Goal &amp; Research Question</h2>
+<ul>
+<li><p><strong>Goal:</strong> Understand how student lifestyle habits relate to academic success.</p></li>
+<li><p><strong>Research question:</strong><br>
+&gt; “How do study time, sleep, screen use, and other daily habits affect exam scores?”</p></li>
+</ul>
+<hr>
+</section>
+<section id="dataset" class="level2">
+<h2 class="anchored" data-anchor-id="dataset">📊 Dataset</h2>
+<ul>
+<li><p>Source: Kaggle “Student Habits vs Academic Performance” dataset.</p></li>
+<li><p><strong>Sample size:</strong> 1,000 students<br>
+</p></li>
+<li><p><strong>Structure:</strong> 16 columns, including:</p>
+<ul>
+<li><code>study_hours_per_day</code><br>
+</li>
+<li><code>sleep_hours</code><br>
+</li>
+<li><code>social_media_hours</code>, <code>netflix_hours</code><br>
+</li>
+<li><code>exercise_frequency</code><br>
+</li>
+<li><code>attendance_percentage</code><br>
+</li>
+<li><code>diet_quality</code>, <code>mental_health_rating</code><br>
+</li>
+<li><code>exam_score</code> (target)<br>
+</li>
+</ul></li>
+<li><p><strong>Pre-processing in R:</strong></p>
+<ul>
+<li>Removed <code>student_id</code><br>
+</li>
+<li>Converted character variables to factors<br>
+</li>
+<li>Checked for missing values</li>
+</ul></li>
+</ul>
+<hr>
+</section>
+<section id="methods" class="level2">
+<h2 class="anchored" data-anchor-id="methods">🔧 Methods</h2>
+<p>We modeled <strong>exam_score</strong> using multiple linear regression.</p>
+<ul>
+<li>Started with all <strong>15</strong> behavioral and demographic predictors.<br>
+</li>
+<li>Used <strong>stepwise selection (stepAIC)</strong> to remove insignificant variables and avoid overfitting.<br>
+</li>
+<li>Final model kept <strong>7 significant predictors:</strong>
+<ul>
+<li><code>study_hours_per_day</code><br>
+</li>
+<li><code>sleep_hours</code><br>
+</li>
+<li><code>attendance_percentage</code><br>
+</li>
+<li><code>exercise_frequency</code><br>
+</li>
+<li><code>mental_health_rating</code><br>
+</li>
+<li><code>social_media_hours</code> (negative effect)<br>
+</li>
+<li><code>netflix_hours</code> (negative effect)<br>
+</li>
+</ul></li>
+<li>Tools: R (<code>lm</code>, <code>MASS::stepAIC</code>, <code>broom</code>, <code>ggplot2</code>).</li>
+</ul>
+<hr>
+</section>
+<section id="model-performance-effects" class="level2">
+<h2 class="anchored" data-anchor-id="model-performance-effects">📈 Model Performance &amp; Effects</h2>
+<p>From the final regression model:</p>
+<ul>
+<li><strong>Adjusted R² ≈ 0.90</strong> – the model explains about 90% of the variance in exam scores.<br>
+</li>
+<li>All predictors in the final model are highly significant (<em>p</em> &lt; 0.001).<br>
+</li>
+<li>Largest effect sizes:
+<ul>
+<li><strong>+9.57</strong> exam points per additional hour of study time per day<br>
+</li>
+<li><strong>–2.62</strong> exam points per additional hour of social media use<br>
+</li>
+<li><strong>–2.28</strong> exam points per additional hour of Netflix use<br>
+</li>
+</ul></li>
+<li>Positive but smaller contributors:
+<ul>
+<li>Higher attendance, more sleep, more exercise, and better mental-health ratings all contribute modestly to higher scores.</li>
+</ul></li>
+</ul>
+<hr>
+</section>
+<section id="key-insights" class="level2">
+<h2 class="anchored" data-anchor-id="key-insights">🔍 Key Insights</h2>
+<ul>
+<li><strong>Study time is the strongest positive driver</strong> of exam performance.<br>
+</li>
+<li><strong>Sleep and mental health matter</strong>—students who sleep more and rate their mental health higher tend to do better.<br>
+</li>
+<li><strong>Screen time works against performance</strong>, especially social media and Netflix.<br>
+</li>
+<li>Attendance and exercise have smaller but still positive effects.</li>
+</ul>
+<hr>
+</section>
+<section id="practical-advice-for-students" class="level2">
+<h2 class="anchored" data-anchor-id="practical-advice-for-students">✅ Practical Advice for Students</h2>
+<p>Based on our model and exploratory analysis:<br>
+- Boost structured <strong>study hours</strong>—even 1 extra focused hour a day has a big payoff.<br>
+- Aim for <strong>7–8 hours of sleep</strong> to support both grades and mental health.<br>
+- Stay <strong>physically active</strong>, even in small amounts.<br>
+- Be intentional with <strong>screen time</strong>, especially social media and streaming.<br>
+- Maintain <strong>consistent attendance</strong> and prioritize your mental well-being.</p>
+<hr>
+</section>
+<section id="project-files" class="level2">
+<h2 class="anchored" data-anchor-id="project-files">📄 Project Files</h2>
+<ul>
+<li>🎤 <strong>Presentation slides (PDF)</strong><br>
+<a href="Image/student-habits-slides.pdf">Download →</a>{Slide}</li>
+</ul>
+<hr>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

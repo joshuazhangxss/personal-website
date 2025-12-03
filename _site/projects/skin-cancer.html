@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Comparing regularized logistic regression and tree-based models for skin cancer detection.">
+<meta name="description" content="Comparing LM, Lasso, Ridge, Random Forest, XGBoost, and GLMNet for predicting malignant vs.&nbsp;benign skin cancer.">
 
 <title>Skin Cancer Classification Prediction – Joshua Zhang</title>
 <style>
@@ -124,14 +124,14 @@ ul.task-list li input[type="checkbox"] {
 <h1 class="title">Skin Cancer Classification Prediction</h1>
   <div class="quarto-categories">
     <div class="quarto-category">Machine Learning</div>
-    <div class="quarto-category">Python</div>
     <div class="quarto-category">Health</div>
+    <div class="quarto-category">R</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    Comparing regularized logistic regression and tree-based models for skin cancer detection.
+    Comparing LM, Lasso, Ridge, Random Forest, XGBoost, and GLMNet for predicting malignant vs.&nbsp;benign skin cancer.
   </div>
 </div>
 
@@ -148,8 +148,248 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="skin-cancer-classification-prediction" class="level1">
+<h1>Skin Cancer Classification Prediction</h1>
+<p>This project builds a model to predict whether a skin lesion is <strong>benign or malignant</strong> using a 70,000-row synthetic dataset with demographic, environmental, and dermatological features. We compared multiple modeling approaches and ultimately selected <strong>GLMNet</strong> for its stability, interpretability, and strong generalization.</p>
+<hr>
+<section id="problem-context" class="level2">
+<h2 class="anchored" data-anchor-id="problem-context">🎯 Problem &amp; Context</h2>
+<ul>
+<li>Skin cancer is among the most common and preventable cancers.<br>
+</li>
+<li>Our task: build a <strong>robust classifier</strong> that distinguishes benign vs.&nbsp;malignant lesions.<br>
+</li>
+<li>Dataset includes both meaningful predictors and intentionally added noise variables.</li>
+</ul>
+<hr>
+</section>
+<section id="dataset-overview" class="level2">
+<h2 class="anchored" data-anchor-id="dataset-overview">📊 Dataset Overview</h2>
+<ul>
+<li><strong>70,000 total observations</strong></li>
+<li><strong>49 initial features → 36 meaningful after cleaning</strong></li>
+<li><strong>Binary target:</strong> benign (0) vs malignant (1)</li>
+</ul>
+<p>Features include:<br>
+- Lesion size, color, location<br>
+- UV exposure behavior<br>
+- Environment (distance to beach, latitude/longitude)<br>
+- Age, demographics<br>
+- Lifestyle factors (exercise, smoking, diet)<br>
+- <strong>10+ noise variables</strong> (favorite_color, phone_brand, etc.)</p>
+<hr>
+</section>
+<section id="data-cleaning" class="level2">
+<h2 class="anchored" data-anchor-id="data-cleaning">🧼 Data Cleaning</h2>
+<section id="missing-values" class="level3">
+<h3 class="anchored" data-anchor-id="missing-values">Missing Values</h3>
+<ul>
+<li>~8% missing across variables<br>
+</li>
+<li>Median + mode imputation</li>
+</ul>
+</section>
+<section id="noise-removal" class="level3">
+<h3 class="anchored" data-anchor-id="noise-removal">Noise Removal</h3>
+<p>Dropped intentionally irrelevant variables, like:<br>
+<code>favorite_color</code>, <code>preferred_cuisine</code>, <code>desk_height_cm</code>, <code>zip_code_last_digit</code>, etc.</p>
+</section>
+<section id="multicollinearity-check" class="level3">
+<h3 class="anchored" data-anchor-id="multicollinearity-check">Multicollinearity Check</h3>
+<p>Revealed strong clusters:<br>
+- <strong>Lesion features</strong> (strongest predictors)<br>
+- <strong>Sun exposure patterns</strong><br>
+- <strong>Lifestyle variables</strong></p>
+<hr>
+</section>
+</section>
+</section>
+<section id="model-comparison" class="level1">
+<h1>🤖 Model Comparison</h1>
+<p>We compared multiple approaches to find the best balance of accuracy, stability, and interpretability.</p>
+<section id="linear-regression-lm" class="level2">
+<h2 class="anchored" data-anchor-id="linear-regression-lm"><strong>1. Linear Regression (LM)</strong></h2>
+<ul>
+<li>Used as a baseline even though outcome is binary<br>
+</li>
+<li>Produced poor probability calibration<br>
+</li>
+<li><strong>Not suitable for classification</strong><br>
+➡️ Eliminated immediately</li>
+</ul>
+</section>
+<section id="regularized-models" class="level2">
+<h2 class="anchored" data-anchor-id="regularized-models"><strong>2. Regularized Models</strong></h2>
+<section id="lasso-l1" class="level3">
+<h3 class="anchored" data-anchor-id="lasso-l1"><strong>Lasso (L1)</strong></h3>
+<ul>
+<li>Removes irrelevant features<br>
+</li>
+<li>Good for high-dimensional noisy data<br>
+</li>
+<li>Slightly unstable across seeds</li>
+</ul>
+</section>
+<section id="ridge-l2" class="level3">
+<h3 class="anchored" data-anchor-id="ridge-l2"><strong>Ridge (L2)</strong></h3>
+<ul>
+<li>Penalizes large coefficients<br>
+</li>
+<li>More stable than Lasso<br>
+</li>
+<li>Retains too many weak predictors</li>
+</ul>
+</section>
+<section id="elastic-net-glmnet-final-choice" class="level3">
+<h3 class="anchored" data-anchor-id="elastic-net-glmnet-final-choice"><strong>Elastic Net (GLMNet) – Final Choice</strong></h3>
+<ul>
+<li>Mix of L1 + L2 regularization<br>
+</li>
+<li>More stable than Lasso alone<br>
+</li>
+<li>Removes noise but keeps important correlated features<br>
+</li>
+<li>Interpretable coefficients<br>
+➡️ <strong>Chosen model</strong></li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="tree-based-models" class="level2">
+<h2 class="anchored" data-anchor-id="tree-based-models"><strong>3. Tree-Based Models</strong></h2>
+<section id="random-forest" class="level3">
+<h3 class="anchored" data-anchor-id="random-forest"><strong>Random Forest</strong></h3>
+<ul>
+<li>Good accuracy<br>
+</li>
+<li>Captures non-linear interactions<br>
+</li>
+<li><strong>Very unstable across random seeds</strong><br>
+</li>
+<li>Performance varied by ±5%</li>
+</ul>
+</section>
+<section id="xgboost" class="level3">
+<h3 class="anchored" data-anchor-id="xgboost"><strong>XGBoost</strong></h3>
+<ul>
+<li>Strong performance after tuning<br>
+</li>
+<li>Captured complex relationships<br>
+</li>
+<li>Overfitted easily<br>
+</li>
+<li>Harder to interpret</li>
+</ul>
+</section>
+<section id="stacked-trees" class="level3">
+<h3 class="anchored" data-anchor-id="stacked-trees"><strong>Stacked Trees</strong></h3>
+<ul>
+<li>Best raw predictive power<br>
+</li>
+<li>Most complex + most unstable<br>
+</li>
+<li>Training time extremely high<br>
+➡️ Not selected due to instability + interpretability concerns</li>
+</ul>
+<hr>
+</section>
+</section>
+</section>
+<section id="why-glmnet-was-the-final-model" class="level1">
+<h1>🏆 Why GLMNet Was the Final Model</h1>
+<section id="most-stable-across-40-multi-seed-runs" class="level3">
+<h3 class="anchored" data-anchor-id="most-stable-across-40-multi-seed-runs">✔ Most stable across 40 multi-seed runs</h3>
+</section>
+<section id="interpretable-coefficients-meaningful-for-healthcare-context" class="level3">
+<h3 class="anchored" data-anchor-id="interpretable-coefficients-meaningful-for-healthcare-context">✔ Interpretable (coefficients meaningful for healthcare context)</h3>
+</section>
+<section id="handles-noise-and-collinearity-automatically" class="level3">
+<h3 class="anchored" data-anchor-id="handles-noise-and-collinearity-automatically">✔ Handles noise and collinearity automatically</h3>
+</section>
+<section id="almost-as-accurate-as-xgboost-but-far-more-reliable" class="level3">
+<h3 class="anchored" data-anchor-id="almost-as-accurate-as-xgboost-but-far-more-reliable">✔ Almost as accurate as XGBoost but far more reliable</h3>
+</section>
+<section id="reproducible-even-with-slight-data-shuffling" class="level3">
+<h3 class="anchored" data-anchor-id="reproducible-even-with-slight-data-shuffling">✔ Reproducible even with slight data shuffling</h3>
+<hr>
+</section>
+<section id="multi-seed-search-threshold-tuning" class="level2">
+<h2 class="anchored" data-anchor-id="multi-seed-search-threshold-tuning">🎲 Multi-Seed Search &amp; Threshold Tuning</h2>
+<section id="multi-seed-search" class="level3">
+<h3 class="anchored" data-anchor-id="multi-seed-search">Multi-seed search</h3>
+<ul>
+<li>Ran the pipeline <strong>40 different times</strong> with new random splits<br>
+</li>
+<li>Found a stable seed/configuration<br>
+</li>
+<li>Avoided lucky/unlucky single-split results</li>
+</ul>
+</section>
+<section id="threshold-tuning" class="level3">
+<h3 class="anchored" data-anchor-id="threshold-tuning">Threshold tuning</h3>
+<ul>
+<li>Default cutoff 0.50 was not optimal<br>
+</li>
+<li>Tuned threshold from 0.45 → 0.55<br>
+</li>
+<li>Best cutoff found: <strong>0.507</strong><br>
+➡️ Slight but meaningful accuracy improvement</li>
+</ul>
+<hr>
+</section>
+</section>
+</section>
+<section id="key-findings" class="level1">
+<h1>🔍 Key Findings</h1>
+<ul>
+<li><strong>Lesion size is the dominant predictor</strong> of malignancy<br>
+</li>
+<li>More sunburns &amp; lower SPF behaviors slightly increase predicted risk<br>
+</li>
+<li>Lifestyle and demographic variables have limited predictive power<br>
+</li>
+<li>GLMNet shrinks irrelevant/noisy variables to zero<br>
+</li>
+<li>Final performance:
+<ul>
+<li>~60% accuracy on the test set (after threshold tuning)</li>
+<li>Very stable performance across seeds<br>
+</li>
+<li>Balanced sensitivity &amp; specificity</li>
+</ul></li>
+</ul>
+<hr>
+<section id="limitations" class="level2">
+<h2 class="anchored" data-anchor-id="limitations">⚠️ Limitations</h2>
+<ul>
+<li>Median/mode imputation oversimplifies missingness<br>
+</li>
+<li>Synthetic dataset mixed with noise variables<br>
+</li>
+<li>GLMNet cannot model complex non-linear interactions</li>
+</ul>
+<hr>
+</section>
+<section id="takeaways" class="level2">
+<h2 class="anchored" data-anchor-id="takeaways">🧠 Takeaways</h2>
+<ul>
+<li>Simpler models can outperform complex ensembles when stability matters<br>
+</li>
+<li>Regularization is crucial when dealing with noisy, synthetic, or high-dimensional data<br>
+</li>
+<li>Tree-based models require careful seed control and tend to be far less reproducible<br>
+</li>
+<li>Lesion characteristics dominate all other factors when predicting malignancy</li>
+</ul>
+<hr>
+</section>
+<section id="slides" class="level2">
+<h2 class="anchored" data-anchor-id="slides">🎤 Slides</h2>
+<p><a href="skin-cancer-slides.pdf">👉 View Presentation Slides (PDF)</a>{Slide}</p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

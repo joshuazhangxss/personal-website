@@ -2,8 +2,6 @@
 title: "Coursework"
 ---
 
-# Coursework
-
 This page highlights the UCLA courses that shape my Statistics & Data Science background.  
 
 ---
